@@ -1,0 +1,32 @@
+CREATE TABLE `sap_measurement_document_header_data`
+(
+  `MeasurementDocument`            varchar(20) NOT NULL,
+  `MeasuringPoint`                 varchar(12) DEFAULT NULL,
+  `MeasuringPointPositionNumber`   varchar(20) DEFAULT NULL,
+  `MsmtRdngDate`                   varchar(80) DEFAULT NULL,
+  `MsmtRdngTime`                   varchar(80) DEFAULT NULL,
+  `Characteristic`                 varchar(30) DEFAULT NULL,
+  `MsmtDocumentReferredOrder`      varchar(22) DEFAULT NULL,
+  `RefdMaintOrderOpStatusObject`   varchar(22) DEFAULT NULL,
+  `MaintenanceOrderOperation`      varchar(4) DEFAULT NULL,
+  `MaintenanceOrderSubOperation`   varchar(4) DEFAULT NULL,
+  `MsmtIsDoneAfterTaskCompltn`     tinyint(1) DEFAULT NULL,
+  `CharcValueUnit`                 varchar(3) DEFAULT NULL,
+  `MeasurementReading`             float(30) DEFAULT NULL,
+  `MeasurementReadingInEntryUoM`   float(30) DEFAULT NULL,
+  `MeasurementReadingEntryUoM`     varchar(3) DEFAULT NULL,
+  `MeasurementCounterReading`      float(30) DEFAULT NULL,
+  `MsmtCounterReadingDifference`   float(30) DEFAULT NULL,
+  `TotalMsmtRdngIsSetExternally`   tinyint(1) DEFAULT NULL,
+  `MeasuringPointTargetValue`      float(30) DEFAULT NULL,
+  `MsmtValuationCode`              varchar(4) DEFAULT NULL,
+  `MeasurementDocumentText`        varchar(40) DEFAULT NULL,
+  `MeasurementDocumentHasLongText` tinyint(1) DEFAULT NULL,
+  `MsmtRdngByUser`                 varchar(12) DEFAULT NULL,
+  `MsmtRdngStatus`                 varchar(1) DEFAULT NULL,
+  `MsmtCntrReadingDiffIsEntered`   tinyint(1) DEFAULT NULL,
+  `MsmtRdngIsReversed`             tinyint(1) DEFAULT NULL,
+  `MsmtCounterReadingIsReplaced`   tinyint(1) DEFAULT NULL,
+    PRIMARY KEY (`MeasurementDocument`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;
